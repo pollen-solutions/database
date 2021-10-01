@@ -9,4 +9,10 @@ namespace Pollen\Database;
  */
 interface DatabaseManagerInterface
 {
+    /**
+     * Sets default connection from environment variables.
+     *
+     * @return static
+     */
+    public function withDefaultEnvConnection(): DatabaseManagerInterface;
 }

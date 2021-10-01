@@ -21,7 +21,7 @@ class DatabaseServiceProvider extends BootableServiceProvider
     public function register(): void
     {
         $this->getContainer()->share(DatabaseManagerInterface::class, function () {
-           return new DatabaseManager();
+            return (new DatabaseManager())->withDefaultEnvConnection();
         });
     }
 }
